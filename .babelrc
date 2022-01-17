@@ -3,7 +3,7 @@
         [
             "@babel/preset-react",
             {
-                "rutime": "automatic"
+                "runtime": "automatic"
             }
 
         ]
