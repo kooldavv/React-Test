@@ -82,7 +82,9 @@ const SearchParams = () => {
           key={pet.id}
         />
       ))}
-    </div>
+      
+      </div>
+    
   );
 };
 
