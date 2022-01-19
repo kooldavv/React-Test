@@ -26,7 +26,7 @@ const SearchParams = () => {
   return (
     <div className="search-params">
       <form
-        onSubmit={e =>{
+        onSubmit={(e) => {
           e.preventDefault();
           requestPets();
         }}
@@ -82,9 +82,7 @@ const SearchParams = () => {
           key={pet.id}
         />
       ))}
-      
-      </div>
-    
+    </div>
   );
 };
 
