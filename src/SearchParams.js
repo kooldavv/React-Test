@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import useBreedList from "./UseBreedList";
-import Pet from "./Pet";
+import Results from "./Results";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 const SearchParams = () => {
@@ -17,8 +17,10 @@ const SearchParams = () => {
   async function requestPets() {
     const res = await fetch(
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+      
     );
 
+    //console.log(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
     const json = await res.json();
     setPets(json.pets);
   }
@@ -35,7 +37,9 @@ const SearchParams = () => {
           Location
           <input
             id="location"
+            onCut={console.log}
             onChange={(e) => setLocation(e.target.value)}
+            onBlur = {(e)=> console.log(e.target.value)}
             value={location}
             placeholder="Location"
           />
@@ -74,14 +78,8 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {pets.map((pet) => (
-        <Pet
-          name={pet.name}
-          animal={pet.animal}
-          breed={pet.breed}
-          key={pet.id}
-        />
-      ))}
+      <Results pets={pets} />
+
     </div>
   );
 };

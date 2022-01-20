@@ -1,12 +1,12 @@
 import React from "react";
 
-const Pet = (Proper) => {
+const Pet = (pets) => {
   return (
     <div>
-      <h2>{Proper.name}</h2>
-      <h3>{Proper.animal}</h3>
-      <h3>{Proper.breed}</h3>
-      <h3>{Proper.id}</h3>
+      <h2>{pets.name}</h2>
+      <h3>{pets.animal}</h3>
+      <h3>{pets.breed}</h3>
+      <h3>{pets.id}</h3>
     </div>
   );
 };
