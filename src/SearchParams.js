@@ -17,10 +17,11 @@ const SearchParams = () => {
   async function requestPets() {
     const res = await fetch(
       `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
-      
     );
 
-    //console.log(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
+    console.log(
+      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+    );
     const json = await res.json();
     setPets(json.pets);
   }
@@ -39,7 +40,7 @@ const SearchParams = () => {
             id="location"
             onCut={console.log}
             onChange={(e) => setLocation(e.target.value)}
-            onBlur = {(e)=> console.log(e.target.value)}
+            onBlur={(e) => console.log(e.target.value)}
             value={location}
             placeholder="Location"
           />
@@ -79,7 +80,6 @@ const SearchParams = () => {
         <button>Submit</button>
       </form>
       <Results pets={pets} />
-
     </div>
   );
 };
