@@ -90,9 +90,10 @@ const SearchParams = () => {
             <option value="darkblue">Dark Blue</option>
             <option value="chartreuse">Chartreuse</option>
             <option value="mediumorchid">Medium Orchid</option>
+            <option value="DarkGray">DarkGray</option>
           </select>
         </label>
-        <button style={{ backgroundColor: theme }}>Submit</button>
+        <button style={{ backgroundColor: theme }}>{console.log(theme)}Submit</button>
       </form>
       <Results pets={pets} />
     </div>

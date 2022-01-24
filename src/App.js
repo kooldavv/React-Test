@@ -6,7 +6,7 @@ import Details from "./Details";
 import SearchParams from "./SearchParams";
 
 const App = () => {
-  const theme = useState("darkblue");
+  const theme = useState("green");
   return (
     <ThemeContext.Provider value={theme}>
       <div>
