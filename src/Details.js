@@ -17,6 +17,7 @@ class Details extends Component {
       `http://pets-v2.dev-apis.com/pets?id=${this.props.match.params.id}`
     );
     const json = await result.json();
+    console.log(this.props.match.params.id);
     this.setState(
       Object.assign(
         {
